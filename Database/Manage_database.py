@@ -1,5 +1,7 @@
 import os 
 import sys
+
+import json
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
@@ -23,6 +25,13 @@ class Manage_db:
         except Exception as e:
             print(e)
             
+    def get_client(self):
+        """ Get the client object """
+        try:
+            return self.__client
+        except Exception as e:
+            print(e) 
+            
     def close_connection(self):
         """ Close the connection """
         try:
@@ -31,5 +40,12 @@ class Manage_db:
         except Exception as e:
             print(e)
                 
-
+if __name__ == "__main__":
+    mangae_db = Manage_db("Sampledatabase")
+    client = mangae_db.get_client()
     
+    try:
+       client.admin.command("ping")
+       print("Connected successfully")
+    except Exception as e:
+        print(e)  
