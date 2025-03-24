@@ -222,7 +222,7 @@
       </div>
     </div>
 
- <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
     <!-- Section courses overview -->
 
@@ -232,20 +232,20 @@
 
       <div class="row m-1 mb-2">
         <div class="col-sm mb-2 me-2 ps-3 p-2 bg-primary-subtle rounded-2 shadow">
-          <h4 class=" h4">Total Courses</h4>
-          <h6 class="text-body-emphasis">9</h6>
+          <h4 class=" h4">Total Countries</h4>
+          <h6 class="text-body-emphasis" id='country_value_count'>9</h6>
         </div>
         <div class="col-sm mb-2 me-2 p-2 ps-3 bg-danger-subtle rounded-2 shadow">
-          <h4 class=" h4">Total Test</h4>
-          <h6 class="text-body-emphasis">87</h6>
+          <h4 class=" h4">Total Region</h4>
+          <h6 class="text-body-emphasis" id='region_value_count'>87</h6>
         </div>
         <div class="col-sm mb-2 me-2 ps-3 p-2 bg-warning-subtle rounded-2 shadow">
-          <h4 class=" h4">Total Assignments</h4>
-          <h6 class="text-body-emphasis">229</h6>
+          <h4 class=" h4">Total sector</h4>
+          <h6 class="text-body-emphasis" id='sector_value_count'>229</h6>
         </div>
         <div class="col-sm mb-2 ps-3 p-2 bg-success-subtle rounded-2 shadow">
-          <h4 class=" h4">Total Quizzes</h4>
-          <h6 class="text-body-emphasis">347</h6>
+          <h4 class=" h4">Total Topics</h4>
+          <h6 class="text-body-emphasis" id='topic_value_count'>347</h6>
         </div>
       </div>
     
@@ -261,303 +261,65 @@
 <div class="container mt-5 mb-5" style="max-width: 100% !important; height: 400px !important; overflow-y: auto !important;">
           <table class="table table-striped mt-1 mb-1" >
             <thead class=" table-primary">
-                <tr>
-                    <th>Course Id</th>
-                    <th>Classes No.</th>
-                    <th>Tests</th>
-                    <th>Assignments</th>
-                    <th>Quiz</th>
-                </tr>
+              <tr>
+                <th>Title</th>
+                <th>Topic</th>
+                <th>Country</th>
+                <th>Intensity</th>
+                <th>Likelihood</th>
+                <th>Relevance</th>
+            </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Course 1</td>
-                    <td>25</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Course 2</td>
-                    <td>20</td>
-                    <td>2</td>
-                    <td>4</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td>Course 3</td>
-                    <td>30</td>
-                    <td>4</td>
-                    <td>6</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Course 4</td>
-                    <td>22</td>
-                    <td>3</td>
-                    <td>5</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>Course 5</td>
-                    <td>28</td>
-                    <td>4</td>
-                    <td>7</td>
-                    <td>11</td>
-                </tr>
-                <tr>
-                    <td>Course 6</td>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td>Course 7</td>
-                    <td>24</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Course 8</td>
-                    <td>26</td>
-                    <td>3</td>
-                    <td>6</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>Course 9</td>
-                    <td>21</td>
-                    <td>2</td>
-                    <td>5</td>
-                    <td>8</td>
-                </tr>
+            <tbody id="data-table">
+             
             </tbody>
         </table>
 </div>
-
- <!-- Section  Faculty Profiles overview -->
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h3 class="h3"> Faculty Profiles</h3>
-      </div>
-      <!-- Section faculty filters -->
-      <div class="row m-1">
-        <div class="col-sm mb-1">
-          <input class="form-control w-100 rounded-2" type="text" id="search_faculty" placeholder="Search by name" aria-label="Search">
-        </div>
-
-        <div class="col-sm  mb-1">
-          <select class="form-select" aria-label="select">
-            <option value="" selected disabled>Filter by Position</option>
-            <option value="All">All</option>
-            <option value="Professor">Professor</option>
-            <option value="Lecturer">Lecturer</option>
-            <option value="Assistant Professor">Assistant Professor</option>
-          </select>
-         </div>
-       
-         <div class="col-sm mb-1">
-           <select class="form-select" aria-label="select">
-             <option value="" selected disabled>Filter by Courses Taught</option>
-             <option value="UI/UX">UI/UX</option>
-             <option value="Python">Python</option>
-             <option value="Web Development">Web Development</option>
-             <option value="Backend Development">Backend Development</option>
-             <option value="Data Analytics">Data Analytics</option>
-           </select>
-         </div>
-      </div>
-      
-      <div class="container mt-3 mb-5" style="max-width: 100% !important; height: 400px !important; overflow-y: auto !important;">
-        <table class="table table-striped mt-1 mb-1">
-          <thead class="table-primary">
-              <tr>
-                  <th>Name</th>
-                  <th>Photo</th>
-                  <th>Position</th>
-                  <th>Courses Taught</th>
-                  <th>Contact Information</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Dr. John Doe</td>
-                  <td><img src="https://via.placeholder.com/50" alt="John Doe" class="faculty-photo"></td>
-                  <td>Professor</td>
-                  <td>Computer Science</td>
-                  <td>Email: johndoe@example.com<br>Phone: 123-456-7890<br>Office: Room 123</td>
-              </tr>
-              <tr>
-                  <td>Prof. Jane Smith</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Jane Smith" class="faculty-photo"></td>
-                  <td>Assistant Professor</td>
-                  <td>Mathematics</td>
-                  <td>Email: janesmith@example.com<br>Phone: 234-567-8901<br>Office: Room 234</td>
-              </tr>
-              <tr>
-                  <td>Dr. Emily Johnson</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Emily Johnson" class="faculty-photo"></td>
-                  <td>Lecturer</td>
-                  <td>Biology</td>
-                  <td>Email: emilyjohnson@example.com<br>Phone: 345-678-9012<br>Office: Room 345</td>
-              </tr>
-              <tr>
-                  <td>Dr. Michael Brown</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Michael Brown" class="faculty-photo"></td>
-                  <td>Professor</td>
-                  <td>Physics</td>
-                  <td>Email: michaelbrown@example.com<br>Phone: 456-789-0123<br>Office: Room 456</td>
-              </tr>
-              <tr>
-                  <td>Prof. Laura Davis</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Laura Davis" class="faculty-photo"></td>
-                  <td>Assistant Professor</td>
-                  <td>Chemistry</td>
-                  <td>Email: lauradavis@example.com<br>Phone: 567-890-1234<br>Office: Room 567</td>
-              </tr>
-              <tr>
-                  <td>Dr. Robert Wilson</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Robert Wilson" class="faculty-photo"></td>
-                  <td>Lecturer</td>
-                  <td>History</td>
-                  <td>Email: robertwilson@example.com<br>Phone: 678-901-2345<br>Office: Room 678</td>
-              </tr>
-              <tr>
-                  <td>Dr. Linda Martinez</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Linda Martinez" class="faculty-photo"></td>
-                  <td>Professor</td>
-                  <td>English</td>
-                  <td>Email: lindamartinez@example.com<br>Phone: 789-012-3456<br>Office: Room 789</td>
-              </tr>
-              <tr>
-                  <td>Prof. James Taylor</td>
-                  <td><img src="https://via.placeholder.com/50" alt="James Taylor" class="faculty-photo"></td>
-                  <td>Assistant Professor</td>
-                  <td>Philosophy</td>
-                  <td>Email: jamestaylor@example.com<br>Phone: 890-123-4567<br>Office: Room 890</td>
-              </tr>
-              <tr>
-                  <td>Dr. Susan Anderson</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Susan Anderson" class="faculty-photo"></td>
-                  <td>Lecturer</td>
-                  <td>Sociology</td>
-                  <td>Email: susananderson@example.com<br>Phone: 901-234-5678<br>Office: Room 901</td>
-              </tr>
-          </tbody>
-      </table>
-      </div>
-
-   <!-- Section admin user and there task -->
-    <div class="container pb-1"> 
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h3 class="h3">Administrative Members</h3>
-      </div>
-
-     <!-- Section Administrative Members filters -->
-    
-    <div class="row m-1">
-       <div class="col-sm mb-1">
-        <input class="form-control w-100 rounded-2" id="search_admins" type="text" placeholder="Search by name" aria-label="Search">
-      </div>
-
-      <div class="col-sm mb-1">
-        <select class="form-select" aria-label="select">
-          <option value="" selected disabled>Filter by Role</option>
-          <option value="All">All</option>
-          <option value="Admin">Admin</option>
-          <option value="Content Manager">Content Manager</option>
-          <option value="Support Team">Support Team</option>
-        </select>
-      </div>
-    </div>
-
-
-      <div class="container mt-3 mb-5" style="max-width: 100% !important; height: 400px !important; overflow-y: auto !important;"> 
-        <table class=" table table-striped mt-1 mb-1">
-          <thead class=" table-primary">
-              <tr>
-                  <th>Name</th>
-                  <th>Photo</th>
-                  <th>Role</th>
-                  <th>Contact Information</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Mr. Andrew Clark</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Andrew Clark" class="admin-photo"></td>
-                  <td>Admin</td>
-                  
-                  <td>Email: andrewclark@example.com<br>Phone: 111-222-3333<br>Office: Room 101</td>
-              </tr>
-              <tr>
-                  <td>Ms. Barbara Lee</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Barbara Lee" class="admin-photo"></td>
-                  <td>Content Manager</td>
-                 
-                  <td>Email: barbaralee@example.com<br>Phone: 222-333-4444<br>Office: Room 202</td>
-              </tr>
-              <tr>
-                  <td>Mr. Charles Harris</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Charles Harris" class="admin-photo"></td>
-                  <td>Support Team</td>
-                 
-                  <td>Email: charlesharris@example.com<br>Phone: 333-444-5555<br>Office: Room 303</td>
-              </tr>
-              <tr>
-                  <td>Ms. Donna Young</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Donna Young" class="admin-photo"></td>
-                  <td>Admin</td>
-                
-                  <td>Email: donnayoung@example.com<br>Phone: 444-555-6666<br>Office: Room 104</td>
-              </tr>
-              <tr>
-                  <td>Mr. Edward Green</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Edward Green" class="admin-photo"></td>
-                  <td>Content Manager</td>
-                 
-                  <td>Email: edwardgreen@example.com<br>Phone: 555-666-7777<br>Office: Room 205</td>
-              </tr>
-              <tr>
-                  <td>Ms. Fiona White</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Fiona White" class="admin-photo"></td>
-                  <td>Support Team</td>
-                  
-                  <td>Email: fionawhite@example.com<br>Phone: 666-777-8888<br>Office: Room 306</td>
-              </tr>
-              <tr>
-                  <td>Mr. George Black</td>
-                  <td><img src="https://via.placeholder.com/50" alt="George Black" class="admin-photo"></td>
-                  <td>Admin</td>
-                  
-                  <td>Email: georgeblack@example.com<br>Phone: 777-888-9999<br>Office: Room 107</td>
-              </tr>
-              <tr>
-                  <td>Ms. Helen Brown</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Helen Brown" class="admin-photo"></td>
-                  <td>Content Manager</td>
-                 
-                  <td>Email: helenbrown@example.com<br>Phone: 888-999-0000<br>Office: Room 208</td>
-              </tr>
-              <tr>
-                  <td>Mr. Ian Gray</td>
-                  <td><img src="https://via.placeholder.com/50" alt="Ian Gray" class="admin-photo"></td>
-                  <td>Support Team</td>
-                 
-                  <td>Email: iangray@example.com<br>Phone: 999-000-1111<br>Office: Room 309</td>
-              </tr>
-          </tbody>
-      </table>
-      </div>
-    </div>
-    </main>
-  </div>
+</main>
+</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
-  
-    <script>
+<script>
+  async function fetchData() {
+      try {
+          const response = await fetch("/get_data");  // Fetch data from Flask API
+          const data = await response.json();  // Convert response to JSON
+
+          let rows = "";
+          let countrySet = new Set();
+          let regionSet = new Set();
+          let sectorSet = new Set();
+          let topicSet = new Set();
+          data.forEach(item => {
+              rows += `<tr>
+                  <td>${item.title}</td>
+                  <td>${item.topic}</td>
+                  <td>${item.country}</td>
+                  <td>${item.intensity}</td>
+                  <td>${item.likelihood}</td>
+                  <td>${item.relevance}</td>
+              </tr>`;
+              if (item.country) countrySet.add(item.country);
+              if (item.region) regionSet.add(item.region);
+              if (item.sector) sectorSet.add(item.sector);
+              if (item.topic) topicSet.add(item.topic);
+          });
+
+          document.getElementById("data-table").innerHTML = rows;
+          // Update Unique Counts
+          document.getElementById("country_value_count").textContent = countrySet.size;
+          document.getElementById("region_value_count").textContent = regionSet.size;
+          document.getElementById("sector_value_count").textContent = sectorSet.size;
+          document.getElementById("topic_value_count").textContent = topicSet.size;
+      } catch (error) {
+          console.error("Error fetching data:", error);
+      }
+  }
+
+  fetchData();  // Call function to fetch and display data
+</script>
+<script>
       // Sample data (randomly generated based on max values)
       const maxStudents = 2345;
       const maxCourses = 9;
