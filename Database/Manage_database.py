@@ -43,9 +43,9 @@ class Manage_db:
 if __name__ == "__main__":
     mangae_db = Manage_db("Sampledatabase")
     client = mangae_db.get_client()
-    
     try:
        client.admin.command("ping")
        print("Connected successfully")
     except Exception as e:
         print(e)  
+
