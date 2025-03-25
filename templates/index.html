@@ -217,7 +217,7 @@
 
 
             // Course Histogram Chart
-          console.log(topicSet);
+          console.log(topicSet[0]);
           console.log(topicSet.value_counts);
           var ctxCourseHistogram = document.getElementById('courseHistogramChart').getContext('2d');
           var courseHistogramChart = new Chart(ctxCourseHistogram, {
@@ -227,7 +227,7 @@
                   labels: topicSet.labels,
                   datasets: [{
                       label: 'Topic',
-                      data: ,
+                      data: setdata,
                       backgroundColor: 'rgba(54, 162, 235, 0.6)',
                       borderColor: 'rgba(54, 162, 235, 1)',
                       borderWidth: 1
